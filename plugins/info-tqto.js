@@ -53,9 +53,11 @@ https://github.com/Rlxfly
 https://github.com/Aiinne
 *❉ Papah-Chan:*
 https://github.com/FahriAdison
+*❉ Humanz:*
+https://github.com/OrochimaruBotz
 *▸ - - - —「 Penulis Ulang 」— - - - ◂*
 *❉ ImYanXiao:*
-https://github.com/ImYanXiao
+https://github.com/OrochimaruBotz
 *▸ - - - —「 Thanks For Suhu 」— - - - ◂*
 *❉ Kannachan:*
 *❉ The.sadboy.01
