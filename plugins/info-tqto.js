@@ -56,7 +56,7 @@ https://github.com/FahriAdison
 *❉ Humanz:*
 https://github.com/OrochimaruBotz
 *▸ - - - —「 Penulis Ulang 」— - - - ◂*
-*❉ ImYanXiao:*
+*❉ Humanz:*
 https://github.com/OrochimaruBotz
 *▸ - - - —「 Thanks For Suhu 」— - - - ◂*
 *❉ Kannachan:*
