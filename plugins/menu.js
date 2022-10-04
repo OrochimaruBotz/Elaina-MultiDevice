@@ -301,23 +301,22 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
   },
 ]
 
-let tek = `┏━━〔 ıll INFO USER llı 〕━㉿
-┃⌬ Api : ${tag}
-┃⌬ Limit : ${limit}
-┃⌬ Role : ${role}
-┃⌬ Premium : ${global.prem ? 'Yes' : 'No'}
-┗━━━━━━━━━━━━━㉿
-┏━━〔 ıll INFO BOT llı 〕━㉿
-◎ Name : ${namebot}
-◎ Active : ${uptime}
-◎ User : ${Object.keys(global.db.data.users).length} User
-◎ Mode : ${global.opts['self'] ? 'Self' : 'public'}
-◎ Chat Ban : ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} Chat Terbanned
-◎ User Ban : ${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Pengguna Terbanned
-┗━━━━━━━━━━━━━㉿
-⫹⫺ Date  : ${week} ${date}
-⫹⫺ Time : ${wib`
-const listMessage = {
+let tek = `*${ucapan()} ${conn.getName(m.sender)}*
+*U S E R  I N F O*
+• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
+• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
+*S T A T U S  I N F O*
+• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
+• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
+• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
+• *ʟɪᴍɪᴛ:* ${usrs.limit}
+• *ʟᴇᴠᴇʟ:* ${usrs.level}
+• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
+• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
+${clockStringP(usrs.premiumTime - new Date())}` : ''} `
+const listMessage = 
   text: tek,
   footer: wm2,
   mentions: await conn.parseMention(tek),
