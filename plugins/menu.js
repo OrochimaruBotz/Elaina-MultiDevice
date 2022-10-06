@@ -301,21 +301,20 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
   },
 ]
 
-let tek = `*${ucapan()} ${conn.getName(m.sender)}*
-*U S E R  I N F O*
-• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
-• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
-*S T A T U S  I N F O*
-• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
-• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
-• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
-• *ʟɪᴍɪᴛ:* ${usrs.limit}
-• *ʟᴇᴠᴇʟ:* ${usrs.level}
-• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
-• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
-${clockStringP(usrs.premiumTime - new Date())}` : ''} `
+let tek = `✧────···[ Dashboard ]···────✧
+*${ucapan()} ${conn.getName(m.sender)}*
+╭━━━━━━━━━━━━━━━━┈─✧
+┴
+│⬡ Nama Bot: GojoBotzMD
+│⬡ Owner Name: Humanz
+│⬡ Aktif selama: ${mpt}
+│⬡ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+│⬡ Prefix : [ ${_p} ]
+│⬡ *${Object.keys(global.db.data.users).length}* Pengguna
+│⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+│⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+┬
+╰━━━━━━━━━━━━━━━━┈─◂`
 const listMessage = 
   text: tek,
   footer: wm2,
